@@ -1,0 +1,33 @@
+a {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav-link {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #666235;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &:last-child {
+    margin-right: unset;
+  }
+
+  &.button {
+    border: unset;
+    margin-bottom: unset;
+
+    &.logo {
+      padding: unset;
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  &.dock-right {
+    justify-content: flex-end;
+  }
+}

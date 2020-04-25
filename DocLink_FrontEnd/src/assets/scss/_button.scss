@@ -1,0 +1,12 @@
+.button {
+  &.button-primary {
+    background-color: #666235;
+    border-color: #666235;
+
+    &:hover {
+      border-color: #e1e9eb;
+      background-color: #e1e9eb;
+      color: black;
+    }
+  }
+}
