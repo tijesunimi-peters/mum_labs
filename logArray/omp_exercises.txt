@@ -1,0 +1,47 @@
+1. Dynamic loop scheduling will perform better when there is load imbalance. Load imbalance happens when some threads perform more work that other threads.
+2. int sum, i;
+   for(i = 0; i < 100;i++) sum += i * 2;
+
+3. Guided scheduling is similar to Dynamic scheduling but guided scheduling assign tasks in automatically managed chunks where as in Dynamic scheduling the chunks size is defined. Dynamic ultimately will have more overhead;
+
+4. Private variables will be j; every other variables are shared.
+
+5. I will use static scheduling because J has a constant range which means that every thread with no matter the number of iterations will opreate in constant time. Static has low overhead in this scenario and low imbalance while Dynamic scheduling will have high overhead and guided is similar to dynamic.
+
+6.1 not suitable because of data dependence
+6.2 not suitable because of data dependence
+6.3 #pragma omp parallel for
+    for (i=0; i < n; i++) a[i] = foo(i);
+
+6.4 not suitable because of data dependence
+6.5 break statement cannot be used with a for loop
+6.6 dotp = 0;
+    #pragma omp parallel for reduction(+:dotp)
+    for (i=0; i<n; i++)
+        dotp += a[i] * b[i];
+
+6.7 not suitable because of data dependence
+6.8 not suitable because of data dependence
+
+7. Static scheduling assigns iterations one at a time to the 3 threads respectively like the table below
+    tid         |   0   1   2
+    --------------------
+    iteration   |   0   1   2
+                |   3   4   5
+
+    until the last iteration
+
+    while the default iterations divides the iterations equally between the threads like the table below
+        tid | iterations
+        ----------------
+        0   | 0 - 6
+        1   | 7 - 13
+        2   | 8 - 19
+
+8.  a. anti dependence
+    b. flow dependence
+    c. no dependence
+    d. no dependence
+
+
+
