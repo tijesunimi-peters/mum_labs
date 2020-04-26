@@ -1,0 +1,1 @@
+Programming Project:Matrix Multiplicationfor (i = 0; i < n; ++) for (j = 0; j < n; j++) for  (k = 0; k < n; k++)C[i][j] += A[i][k] * B[k][j];•Run and test a sequential version.•Invert the j, k loops and run again, comparing the execution time (explain reasons for the change).•Write and test performance of parallel versions of original and inverted loops.
