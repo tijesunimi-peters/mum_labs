@@ -1,0 +1,1 @@
+Parallel Group multiplier has the best execution time because it has the lowest overhead in thread creation and management and uses all the cores of the system by optimally with perfect load balancing the threads to execute equal amount of work
