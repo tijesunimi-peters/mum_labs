@@ -1,6 +1,0 @@
-J4 In the slide “Potential Deadlock,” why do we
-need two locks? Would the code still work if we
-only used one lock?
-
-Answer
-The code will work with one lock but the code is going to run in seqential rather than parallel

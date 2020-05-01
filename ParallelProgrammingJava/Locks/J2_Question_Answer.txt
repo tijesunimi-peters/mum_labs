@@ -1,7 +1,0 @@
-J2 How does a fair Read-Write lock prevent many
-active readers from starving a writer? Can more
-than one writer acquire the lock at the same
-time?
-
-Answer
- Only one writer can acquire the lock at a time. The fair Read-Write allows multiple reader threads at a time to read but puts all others threads on waiting state if there is writer thread until the writer thread is done. In the wait queue if there are reader and writer threads waiting... all the reader threads that arrive before the writer lock will be allowed to acquire the lock while the writer and all reader threads that came after the writer thread will wait and then when all the reader threads are done, the write acquires the lock.

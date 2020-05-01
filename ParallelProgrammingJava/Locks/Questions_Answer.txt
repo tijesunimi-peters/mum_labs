@@ -1,0 +1,23 @@
+J2 How does a fair Read-Write lock prevent many
+active readers from starving a writer? Can more
+than one writer acquire the lock at the same
+time?
+
+Answer
+ Only one writer can acquire the lock at a time. The fair Read-Write allows multiple reader threads at a time to read but puts all others threads on waiting state if there is writer thread until the writer thread is done. In the wait queue if there are reader and writer threads waiting... all the reader threads that arrive before the writer lock will be allowed to acquire the lock while the writer and all reader threads that came after the writer thread will wait and then when all the reader threads are done, the write acquires the lock.
+
+
+J3 In the slide “Potential Deadlock,” describe a
+series of event that could lead to a Deadlock.
+
+Answer
+1. Deadlock is a situation where two or more threads are blocked forever, waiting for each other.
+2. Also when multiple threads need the same locks but obtain them in different other
+
+
+J4 In the slide “Potential Deadlock,” why do we
+need two locks? Would the code still work if we
+only used one lock?
+
+Answer
+The code will work with one lock but the code is going to run in seqential rather than parallel
