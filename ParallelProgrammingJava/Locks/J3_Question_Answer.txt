@@ -1,0 +1,6 @@
+J3 In the slide “Potential Deadlock,” describe a
+series of event that could lead to a Deadlock.
+
+Answer
+1. Deadlock is a situation where two or more threads are blocked forever, waiting for each other.
+2. Also when multiple threads need the same locks but obtain them in different other

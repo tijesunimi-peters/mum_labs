@@ -1,0 +1,9 @@
+J5 A Parallel Stack can be implemented using an
+array to store the values, and a Top pointer to
+indicate the index of the current top element.
+The following three methods are needed:
+Push(x): put item x on top of stack
+Pop(y): remove top of stack and return in y
+Clear: initialize stack to empty
+Implement a Parallel Stack class in Java and test it
+using many parallel threads.

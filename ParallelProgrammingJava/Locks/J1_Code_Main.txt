@@ -10,7 +10,6 @@ public class Main {
     list.setStack(stack);
     stack.setList(list);
 
-    list.add("also");
     list.add("This");
     list.add("is");
     list.add("life");

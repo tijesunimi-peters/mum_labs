@@ -1,0 +1,6 @@
+J1. The slide “Timeouts to Prevent Deadlock”
+provides a description of code for acquiring
+locks. Write this code in Java. Each Thread
+should continue attempting to acquire the locks
+until it finally succeeds. Your code should never
+allow the possibility of deadlock.
