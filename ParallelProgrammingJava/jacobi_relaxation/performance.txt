@@ -1,0 +1,9 @@
+Sequential
+=================
+Completed               37.802183 seconds
+
+Parallel
+=================
+Completed               28.613937 seconds
+Speed Up:               1.321111 times
+Processor Util:         0.330278
