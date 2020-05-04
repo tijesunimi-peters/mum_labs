@@ -1,3 +1,5 @@
+package locks;
+
 
 public class ParallelStackThread implements Runnable {
   private ParallelStack stack;

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Application",
+            "request": "launch",
+            "mainClass": "jacobi_relaxation.Application",
+            "projectName": "ParallelProgrammingJava_2e4a4ef1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Application",
+            "request": "launch",
+            "mainClass": "JacobiRelaxation.Application",
+            "projectName": "ParallelProgrammingJava_2e4a4ef1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - StringPatternMatch",
             "request": "launch",
             "mainClass": "StringPatternMatch",

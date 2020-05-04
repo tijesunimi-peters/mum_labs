@@ -1,3 +1,4 @@
+package merge_sorted_list;
 
 public class Main {
     static int limit = 2000000;

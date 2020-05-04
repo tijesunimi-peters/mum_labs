@@ -1,3 +1,4 @@
+package merge_sorted_list;
 
 public class MergeSort {
     public static String firstPrint;
@@ -13,8 +14,7 @@ public class MergeSort {
             }
 
             if ((i + 1) % 500000 == 0) {
-
-                Main.printOutput(name, ".".repeat((i + 1) / 500000), firstPrint);
+                // Main.printOutput(name,  ".".repeat((i + 1) / 500000), firstPrint);
             }
 
             finalList[pos] = list1[i];

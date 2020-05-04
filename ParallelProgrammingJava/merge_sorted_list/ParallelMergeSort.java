@@ -1,3 +1,5 @@
+package merge_sorted_list;
+
 public class ParallelMergeSort implements Runnable {
     private int[] arr1;
     private int[] arr2;
