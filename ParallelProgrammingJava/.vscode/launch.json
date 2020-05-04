@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - StringPatternMatch",
+            "request": "launch",
+            "mainClass": "StringPatternMatch",
+            "projectName": "ParallelProgrammingJava_2e4a4ef1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BinarySearch",
             "request": "launch",
             "mainClass": "BinarySearch",
