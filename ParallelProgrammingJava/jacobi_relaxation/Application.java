@@ -1,7 +1,5 @@
 package jacobi_relaxation;
 
-import jacobi_relaxation.ParallelJacobi;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
