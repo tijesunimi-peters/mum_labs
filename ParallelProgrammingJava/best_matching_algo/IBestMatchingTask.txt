@@ -1,0 +1,8 @@
+package com.javferna.packtpub.mastering.bestMatching.concurrent;
+
+import com.javferna.packtpub.mastering.bestMatching.common.BestMatchingData;
+
+@FunctionalInterface
+public interface IBestMatchingTask<A, B, C, D> {
+    BestMatchingData apply(A a, B b, C c, D d);
+}

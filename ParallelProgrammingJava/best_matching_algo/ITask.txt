@@ -1,0 +1,6 @@
+package com.javferna.packtpub.mastering.bestMatching.concurrent;
+
+@FunctionalInterface
+public interface ITask<A, B, C, D> {
+    Boolean apply(A a, B b, C c, D d) throws Exception;
+}

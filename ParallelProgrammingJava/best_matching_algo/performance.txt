@@ -1,0 +1,30 @@
+Cores:					4
+Dictionary Size:		250353
+Word:					stitter
+
+
+Exist Serial
+====================
+Completed:				341.000000
+
+Exist Concurrent
+===========================
+java.lang.Exception: The word stitter doesn't exists.
+
+Best Matching Serial
+=======================
+Minimum distance:		1
+Completed:				419.000000
+Speed Up:				0.813842 times
+
+Best Matching Concurrent Main
+==================================
+Minimum distance:		1
+Completed:				128.000000
+Speed Up:				2.664063 times
+
+Best Matching Advanced Concurrent Main
+==================================
+Minimum distance:		1
+Completed:				169.000000
+Speed Up:				2.017751 times
