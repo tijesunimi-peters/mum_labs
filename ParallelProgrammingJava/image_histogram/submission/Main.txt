@@ -3,11 +3,12 @@ package com.company;
 
 import java.io.FileWriter;
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class Main {
     private static Integer n = 20000;
     private static Integer[][] image;
-    public static int[] hist;
+    public static AtomicLong[] hist;
 
     private static void generate(Integer n, Integer max) {
         Random random = new Random();
@@ -20,10 +21,21 @@ public class Main {
 
     }
 
+    public static void initializeHist(int max) {
+        hist = new AtomicLong[max];
+
+        for(int i = 0; i < max; i++) {
+            hist[i] = new AtomicLong(0);
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         StringBuffer output = new StringBuffer();
 
-        hist = new int[10];
+        output.append("System properties\n============================\n");
+        output.append(String.format("Cores:\t\t%d \n\n", Runtime.getRuntime().availableProcessors()));
+
+        initializeHist(10);
         image = new Integer[n][n];
         generate(n, 10);
         Sequential sequential = new Sequential(n, 10, image);
@@ -39,7 +51,8 @@ public class Main {
         Thread.sleep(5000);
 
 //        image = new Integer[n][n];
-        hist = new int[100];
+//        hist = new int[100];
+        initializeHist(100);
         output.append("\n");
         generate(n, 100);
 
@@ -58,9 +71,7 @@ public class Main {
         LocalParallel localParallel = new LocalParallel(n, 100, image);
         localParallel.run(seqTime, output);
 
-
-//        System.out.println(output.toString());
-        FileWriter file = new FileWriter("performance.txt");
+        FileWriter file = new FileWriter("submission/performance.txt");
         file.write(output.toString());
         file.close();
     }

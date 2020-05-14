@@ -17,57 +17,47 @@ public class LocalParallel {
         this.n = n;
         this.max = max;
         this.image = image;
+        this.hist = new int[max];
     }
 
     public void run(double seqTime, StringBuffer output) {
         output.append(String.format("Parallel with local hist max: %d\n==================\n", max));
         int cores = Runtime.getRuntime().availableProcessors();
         int chunk = n / cores;
-        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(cores);
-        List<Callable<int[]>> callables = new ArrayList<Callable<int[]>>();
+        List<Thread> threads = new ArrayList<Thread>();
+        List<int[]> miniHists = new ArrayList<>();
 
         for (int i = 0; i < cores; i++) {
+            int[] localHist = new int[max];
             int temp = i * chunk;
             int startIndex = temp == 0 ? temp : temp + 1;
             int endIndex = (i + 1) * chunk;
-            Task task = new Task(n, max, image, startIndex, endIndex);
-            callables.add(task);
+            Task task = new Task(n, max, image, startIndex, endIndex, localHist);
+            miniHists.add(localHist);
+            threads.add(new Thread(task));
         }
 
-        List<Future<int[]>> results;
-        List<int[]> miniHists = new ArrayList<>();
         Date startTime = null;
         Date endTime = null;
 
+        startTime = new Date();
+        for(Thread thread: threads) thread.start();
+
 
         try {
-            startTime = new Date();
-            results = executor.invokeAll(callables);
-
-            for (Future<int[]> future : results) {
-                miniHists.add(future.get());
-            }
+            for(Thread thread: threads) thread.join();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-        executor.shutdown();
 
         for(int i = 0; i < miniHists.size(); i++) {
             for(int j = 0; j < max; j++){
-                Main.hist[j] += miniHists.get(i)[j];
+                hist[j] += miniHists.get(i)[j];
             }
         }
 
         endTime = new Date();
-
-        try {
-            executor.awaitTermination(5000, TimeUnit.MILLISECONDS);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-
 
         double processingTime = endTime.getTime() - startTime.getTime();
         output.append(String.format("Completed:\t\t%f seconds\n", processingTime / 1000.0));
