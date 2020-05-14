@@ -1,0 +1,27 @@
+Sequential max: 10
+===================
+Completed:		0.636000 seconds
+
+Parallel with lock max: 10
+==================
+Completed:		10.004000 seconds
+Speed Up:		0.063575 times
+
+Sequential max: 100
+===================
+Completed:		0.607000 seconds
+
+Parallel with lock max: 100
+==================
+Completed:		10.004000 seconds
+Speed Up:		0.060676 times
+
+Parallel no lock max: 100
+==================
+Completed:		2.418000 seconds
+Speed Up:		0.251034 times
+
+Parallel with local hist max: 100
+==================
+Completed:		0.455000 seconds
+Speed Up:		1.334066 times 
