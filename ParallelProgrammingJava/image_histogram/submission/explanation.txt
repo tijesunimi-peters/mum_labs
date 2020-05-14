@@ -1,0 +1,18 @@
+The parallel execution time includes creation of threads and creation of locks due to the atomic variables which is substantial during the execution time.
+
+Version 3 answers are incorrect because of race conditions due to not using locks even though this executed fastest of
+all the parallel versions
+
+Parallel version 1
+Due to locking, there are waiting threads for updating a location on the histogram array
+
+Parallel version 2
+Due to locking, there are 10 times less waiting threads for updating a location on the histogram array compared to version 1
+
+Parallel version 3
+Since there is no locking so there is no need for any thread to wait in queue to update a location on the histogram array
+and so code runs more in parallel but with race conditions which means data will be lost and the final result will be incorrect
+
+Parallel version 4
+There is no need for locking or atomicity because the histogram array is local to the threads which makes things faster.
+The final result is going to be correct because there is no race condition involved

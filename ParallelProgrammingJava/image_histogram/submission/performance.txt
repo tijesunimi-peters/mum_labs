@@ -4,28 +4,28 @@ Cores:		4
 
 Sequential max: 10
 ===================
-Completed:		0.580000 seconds
+Completed:		0.620000 seconds
 
 Parallel with lock max: 10
 ==================
-Completed:		10.005000 seconds
-Speed Up:		0.057971 times
+Completed:		6.698000 seconds
+Speed Up:		0.092565 times
 
 Sequential max: 100
 ===================
-Completed:		0.663000 seconds
+Completed:		0.633000 seconds
 
 Parallel with lock max: 100
 ==================
-Completed:		10.005000 seconds
-Speed Up:		0.066267 times
+Completed:		4.730000 seconds
+Speed Up:		0.133827 times
 
 Parallel no lock max: 100
 ==================
-Completed:		2.341000 seconds
-Speed Up:		0.283212 times
+Completed:		4.410000 seconds
+Speed Up:		0.143537 times
 
 Parallel with local hist max: 100
 ==================
-Completed:		0.497000 seconds
-Speed Up:		1.334004 times 
+Completed:		0.300000 seconds
+Speed Up:		2.110000 times 
