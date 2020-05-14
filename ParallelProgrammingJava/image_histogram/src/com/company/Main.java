@@ -23,6 +23,9 @@ public class Main {
     public static void main(String[] args) throws Exception {
         StringBuffer output = new StringBuffer();
 
+        output.append("System properties\n============================\n");
+        output.append(String.format("Cores:\t\t%d \n\n", Runtime.getRuntime().availableProcessors()));
+
         hist = new int[10];
         image = new Integer[n][n];
         generate(n, 10);
@@ -59,8 +62,7 @@ public class Main {
         localParallel.run(seqTime, output);
 
 
-//        System.out.println(output.toString());
-        FileWriter file = new FileWriter("performance.txt");
+        FileWriter file = new FileWriter("submission/performance.txt");
         file.write(output.toString());
         file.close();
     }

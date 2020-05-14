@@ -1,27 +1,31 @@
+System properties
+============================
+Cores:		4 
+
 Sequential max: 10
 ===================
-Completed:		0.636000 seconds
+Completed:		0.413000 seconds
 
 Parallel with lock max: 10
 ==================
-Completed:		10.004000 seconds
-Speed Up:		0.063575 times
+Completed:		53.829000 seconds
+Speed Up:		0.007672 times
 
 Sequential max: 100
 ===================
-Completed:		0.607000 seconds
+Completed:		4.696000 seconds
 
 Parallel with lock max: 100
 ==================
-Completed:		10.004000 seconds
-Speed Up:		0.060676 times
+Completed:		10.146000 seconds
+Speed Up:		0.462842 times
 
 Parallel no lock max: 100
 ==================
-Completed:		2.418000 seconds
-Speed Up:		0.251034 times
+Completed:		14.486000 seconds
+Speed Up:		0.324175 times
 
 Parallel with local hist max: 100
 ==================
-Completed:		0.455000 seconds
-Speed Up:		1.334066 times 
+Completed:		6.072000 seconds
+Speed Up:		0.773386 times 
